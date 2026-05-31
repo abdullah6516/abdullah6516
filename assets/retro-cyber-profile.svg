@@ -1,0 +1,217 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Abdullah Elian retro cyber profile header</title>
+  <desc id="desc">Animated cyberpunk retro SVG with neon grid, 3D cube, terminal text, and violin motif.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#030014"/>
+      <stop offset="35%" stop-color="#12002f"/>
+      <stop offset="70%" stop-color="#2a003f"/>
+      <stop offset="100%" stop-color="#050816"/>
+    </linearGradient>
+
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff1a8"/>
+      <stop offset="35%" stop-color="#ffb347"/>
+      <stop offset="70%" stop-color="#ff2e88"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </radialGradient>
+
+    <linearGradient id="neonText" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00f5d4"/>
+      <stop offset="35%" stop-color="#facc15"/>
+      <stop offset="70%" stop-color="#fb7185"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="heavyGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="1 0 0 0 0.00
+                0 1 0 0 0.95
+                0 0 1 0 0.83
+                0 0 0 1 0" />
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <pattern id="scanlines" width="6" height="6" patternUnits="userSpaceOnUse">
+      <rect width="6" height="2" fill="#ffffff" opacity="0.055"/>
+    </pattern>
+
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#00f5d4" stroke-width="1" opacity="0.33"/>
+    </pattern>
+
+    <style>
+      .float { animation: float 5s ease-in-out infinite; transform-origin: center; }
+      .pulse { animation: pulse 2.4s ease-in-out infinite; transform-origin: center; }
+      .flicker { animation: flicker 3.2s linear infinite; }
+      .cube { animation: cubeSpin 9s ease-in-out infinite; transform-origin: 890px 245px; }
+      .bow { animation: bowMove 3.8s ease-in-out infinite; transform-origin: 250px 265px; }
+      .string { animation: stringVibe 1.3s ease-in-out infinite; transform-origin: center; }
+      .gridMove { animation: gridDrift 7s linear infinite; }
+      .dash { animation: dash 5s linear infinite; stroke-dasharray: 30 18; }
+      .typing1 { animation: blink1 6s steps(1) infinite; }
+      .typing2 { animation: blink2 6s steps(1) infinite; }
+      .typing3 { animation: blink3 6s steps(1) infinite; }
+      .hud { animation: hudTilt 6s ease-in-out infinite; transform-origin: center; }
+      .orbit { animation: orbit 8s linear infinite; transform-origin: 890px 245px; }
+
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-12px); }
+      }
+
+      @keyframes pulse {
+        0%, 100% { opacity: .72; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.035); }
+      }
+
+      @keyframes flicker {
+        0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
+        20%, 24%, 55% { opacity: .45; }
+      }
+
+      @keyframes cubeSpin {
+        0%, 100% { transform: skewY(-6deg) rotate(0deg) scale(1); }
+        50% { transform: skewY(6deg) rotate(4deg) scale(1.04); }
+      }
+
+      @keyframes bowMove {
+        0%, 100% { transform: translateX(-14px) rotate(-7deg); }
+        50% { transform: translateX(18px) rotate(8deg); }
+      }
+
+      @keyframes stringVibe {
+        0%, 100% { transform: translateX(0); opacity: .7; }
+        50% { transform: translateX(1.5px); opacity: 1; }
+      }
+
+      @keyframes gridDrift {
+        from { transform: translateY(0); }
+        to { transform: translateY(60px); }
+      }
+
+      @keyframes dash {
+        to { stroke-dashoffset: -240; }
+      }
+
+      @keyframes blink1 {
+        0%, 20% { opacity: 1; }
+        21%, 100% { opacity: .25; }
+      }
+
+      @keyframes blink2 {
+        0%, 30% { opacity: .25; }
+        31%, 55% { opacity: 1; }
+        56%, 100% { opacity: .25; }
+      }
+
+      @keyframes blink3 {
+        0%, 60% { opacity: .25; }
+        61%, 90% { opacity: 1; }
+        91%, 100% { opacity: .25; }
+      }
+
+      @keyframes hudTilt {
+        0%, 100% { transform: perspective(900px) rotateX(0deg) rotateY(0deg); }
+        50% { transform: perspective(900px) rotateX(4deg) rotateY(-5deg); }
+      }
+
+      @keyframes orbit {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+
+      text { font-family: "Courier New", "Fira Code", monospace; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="520" fill="url(#bg)"/>
+  <rect width="1200" height="520" fill="url(#scanlines)" opacity="0.75"/>
+
+  <g opacity="0.85" class="gridMove">
+    <path d="M0 365 L1200 365 L1200 520 L0 520 Z" fill="url(#grid)" opacity="0.28"/>
+  </g>
+
+  <g transform="translate(600 385) scale(1 0.38)" opacity="0.75">
+    <circle r="250" fill="none" stroke="#fb7185" stroke-width="2" opacity="0.65"/>
+    <circle r="190" fill="none" stroke="#00f5d4" stroke-width="2" opacity="0.45"/>
+    <circle r="125" fill="none" stroke="#facc15" stroke-width="2" opacity="0.38"/>
+  </g>
+
+  <g class="pulse" filter="url(#heavyGlow)">
+    <circle cx="600" cy="160" r="92" fill="url(#sun)" opacity="0.95"/>
+    <path d="M510 140 H690 M510 163 H690 M525 188 H675 M550 211 H650" stroke="#030014" stroke-width="8" opacity="0.56"/>
+  </g>
+
+  <g class="hud">
+    <rect x="60" y="70" width="1080" height="330" rx="24" fill="#050816" opacity="0.52" stroke="#00f5d4" stroke-width="2"/>
+    <rect x="82" y="92" width="1036" height="286" rx="18" fill="none" stroke="#fb7185" stroke-width="1.4" opacity="0.75"/>
+    <path class="dash" d="M100 115 H1100 M100 355 H1100" stroke="#facc15" stroke-width="2" opacity="0.8"/>
+  </g>
+
+  <g class="float" filter="url(#glow)">
+    <text x="600" y="150" text-anchor="middle" font-size="50" font-weight="800" fill="url(#neonText)" letter-spacing="4">
+      ABDULLAH ELIAN
+    </text>
+    <text x="600" y="192" text-anchor="middle" font-size="20" fill="#fef3c7" letter-spacing="3" class="flicker">
+      SOFTWARE ENGINEER // FULL-STACK DEVELOPER
+    </text>
+    <text x="600" y="226" text-anchor="middle" font-size="17" fill="#00f5d4" letter-spacing="2">
+      APIs · MICROSERVICES · DASHBOARDS · REAL-TIME SYSTEMS
+    </text>
+  </g>
+
+  <g transform="translate(150 255)" filter="url(#glow)">
+    <path d="M85 -75 C45 -55 42 -2 75 18 C35 54 45 112 95 118 C145 112 155 54 115 18 C148 -2 145 -55 105 -75 C100 -90 90 -90 85 -75 Z"
+      fill="none" stroke="#facc15" stroke-width="5" opacity="0.9"/>
+    <circle cx="72" cy="34" r="9" fill="#fb7185"/>
+    <circle cx="118" cy="34" r="9" fill="#00f5d4"/>
+    <path d="M95 -76 L95 130" stroke="#fef3c7" stroke-width="3"/>
+    <path class="string" d="M82 -54 L82 114" stroke="#a78bfa" stroke-width="1.6"/>
+    <path class="string" d="M108 -54 L108 114" stroke="#00f5d4" stroke-width="1.6"/>
+    <path d="M63 130 H127" stroke="#facc15" stroke-width="5" stroke-linecap="round"/>
+    <g class="bow">
+      <path d="M5 20 L190 74" stroke="#fb7185" stroke-width="4" stroke-linecap="round"/>
+      <path d="M12 12 L198 66" stroke="#00f5d4" stroke-width="1.8" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <g class="cube" filter="url(#glow)">
+    <polygon points="820,170 930,130 1038,170 930,212" fill="#00f5d4" opacity="0.12" stroke="#00f5d4" stroke-width="3"/>
+    <polygon points="820,170 930,212 930,330 820,285" fill="#fb7185" opacity="0.10" stroke="#fb7185" stroke-width="3"/>
+    <polygon points="1038,170 930,212 930,330 1038,285" fill="#facc15" opacity="0.10" stroke="#facc15" stroke-width="3"/>
+    <path d="M820 285 L930 245 L1038 285 M930 130 L930 245 M820 170 L820 285 M1038 170 L1038 285"
+      fill="none" stroke="#fef3c7" stroke-width="1.4" opacity="0.7"/>
+  </g>
+
+  <g class="orbit">
+    <circle cx="890" cy="98" r="6" fill="#00f5d4" filter="url(#glow)"/>
+    <circle cx="1012" cy="245" r="5" fill="#facc15" filter="url(#glow)"/>
+    <circle cx="890" cy="392" r="6" fill="#fb7185" filter="url(#glow)"/>
+  </g>
+
+  <g transform="translate(180 337)" filter="url(#glow)">
+    <rect x="0" y="0" width="840" height="72" rx="10" fill="#020617" opacity="0.75" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="26" y="29" font-size="18" fill="#4ade80" class="typing1">&gt; booting retro cyber profile...</text>
+    <text x="26" y="53" font-size="18" fill="#facc15" class="typing2">&gt; loading clean architecture, APIs, dashboards...</text>
+    <text x="505" y="53" font-size="18" fill="#00f5d4" class="typing3">&gt; status: ready_to_ship</text>
+  </g>
+
+  <g opacity="0.55">
+    <path d="M0 440 C160 402 260 470 420 430 S690 395 850 432 1040 470 1200 425" fill="none" stroke="#fb7185" stroke-width="2"/>
+    <path d="M0 465 C170 430 270 492 430 452 S700 420 860 456 1035 493 1200 450" fill="none" stroke="#00f5d4" stroke-width="2"/>
+  </g>
+</svg>
