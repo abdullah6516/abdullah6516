@@ -292,9 +292,6 @@ Push notifications, email, WhatsApp integrations, Firebase, and database notific
 
 <div align="center">
 
-<a href="https://github.com/abhisheknaiidu/awesome-github-profile-readme"><img src="https://img.shields.io/badge/INSPIRED_BY-awesome_profile_readmes-050816?style=for-the-badge&logo=github&logoColor=white&labelColor=a78bfa" alt="Inspired by awesome-github-profile-readme" /></a>
-<br />
-
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:facc15,30:be123c,65:1e1b4b,100:050816&height=105&section=footer&text=END%20OF%20LINE&fontSize=18&fontColor=fef3c7&animation=twinkling" alt="Profile footer" />
 
 </div>
